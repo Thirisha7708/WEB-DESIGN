@@ -1,50 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nature World</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Photo Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<a href="#main" class="skip">Skip to Main Content</a>
+    <h1>Interactive Photo Gallery</h1>
 
-<header>
-<h1>Nature World</h1>
+    <div id="image">
+        Hover over an image below to display here.
+    </div>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="gallery.html">Gallery</a>
-<a href="about.html">About</a>
-</nav>
+    <img src="https://picsum.photos/id/1015/200/150"
+         alt="Beautiful Mountain"
+         onmouseover="upDate(this)"
+         onmouseout="undo()">
 
-</header>
+    <img src="https://picsum.photos/id/1025/200/150"
+         alt="Cute Dog"
+         onmouseover="upDate(this)"
+         onmouseout="undo()">
 
-<main id="main">
+    <img src="https://picsum.photos/id/1035/200/150"
+         alt="Green Forest"
+         onmouseover="upDate(this)"
+         onmouseout="undo()">
 
-<h2>Welcome</h2>
-
-<div class="grid">
-
-<img src="https://picsum.photos/300/200?1" alt="Mountain">
-
-<div>
-<p>
-Nature gives us beautiful mountains, forests, rivers and lakes.
-This website demonstrates HTML and CSS concepts including Grid,
-Flexbox, Hover effects, and Accessibility.
-</p>
-</div>
-
-</div>
-
-</main>
-
-<footer>
-<p>&copy; 2026 Nature World</p>
-</footer>
+    <script src="script.js"></script>
 
 </body>
 </html>
