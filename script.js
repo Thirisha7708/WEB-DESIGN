@@ -1,30 +1,33 @@
-function upDate(previewPic) {
+function upDate(previewPic){
 
-    // Check if event is working
-    console.log("Mouse Over Event Triggered");
+    console.log("Image selected");
 
-    // Display image details
-    console.log("Alt Text:", previewPic.alt);
-    console.log("Image Source:", previewPic.src);
+    console.log(previewPic.alt);
+    console.log(previewPic.src);
 
-    // Get the preview area
-    let imageDiv = document.getElementById("image");
+    document.getElementById("image").innerHTML = previewPic.alt;
 
-    // Change the text
-    imageDiv.innerHTML = previewPic.alt;
-
-    // Change the background image
-    imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+    document.getElementById("image").style.backgroundImage =
+    "url('" + previewPic.src + "')";
 }
 
-function undo() {
+function undo(){
 
-    // Get the preview area
-    let imageDiv = document.getElementById("image");
+    document.getElementById("image").style.backgroundImage="url('')";
 
-    // Reset background image
-    imageDiv.style.backgroundImage = "url('')";
+    document.getElementById("image").innerHTML=
+    "Hover over or focus on an image below to display here.";
+}
 
-    // Reset text
-    imageDiv.innerHTML = "Hover over an image below to display here.";
+function addTabIndex(){
+
+    console.log("Page Loaded");
+
+    let images=document.querySelectorAll("img");
+
+    for(let i=0;i<images.length;i++){
+
+        images[i].setAttribute("tabindex","0");
+
+    }
 }
