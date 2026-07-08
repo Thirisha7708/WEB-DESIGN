@@ -1,0 +1,59 @@
+/* Mobile View (default) */
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  display: grid;
+  gap: 10px;
+}
+
+figure {
+  border-radius: 50%;
+}
+
+img {
+  width: 100%;
+}
+
+/* Tablet View */
+@media (min-width: 772px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  figure {
+    border-radius: 50%;
+  }
+
+  figure:last-child {
+    grid-column: 1 / span 2;
+  }
+}
+
+/* Large Screen View */
+@media (min-width: 992px) {
+  figure:nth-child(3n) {
+    grid-column: 1 / span 2;
+  }
+
+  figure {
+    border-radius: 0;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  figure {
+    background-color: #222;
+    color: #ffff99;
+    border-color: black;
+  }
+}
