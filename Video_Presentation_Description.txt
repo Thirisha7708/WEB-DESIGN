@@ -1,0 +1,9 @@
+Optional Video Presentation Description
+
+This is a short practice presentation introducing my website project.
+The presentation briefly explains: - The purpose of the website. - The
+technologies used: HTML, CSS, and JavaScript. - Basic accessibility
+features. - Responsive design for different screen sizes.
+
+This video is submitted as a practice upload for the optional
+assignment.
